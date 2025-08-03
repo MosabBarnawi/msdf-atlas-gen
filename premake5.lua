@@ -9,6 +9,8 @@ project "msdf-atlas-gen"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-intermediate/" .. outputdir .. "/%{prj.name}")
 
+	print("\27[33mSetting Up " .. project().name .. "\27[0m")  -- Yellow
+
 	files
 	{
 		"msdf-atlas-gen/**.h",
@@ -20,7 +22,8 @@ project "msdf-atlas-gen"
 	{
 		"msdf-atlas-gen",
 		"msdfgen",
-		"msdfgen/include"
+		"msdfgen/include",
+		"artery-font-format"
 	}
 
 	defines
