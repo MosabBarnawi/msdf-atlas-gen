@@ -71,6 +71,24 @@
             "name": "linux-no-skia-dbg",
             "displayName": "Linux debug config with system libraries and no Skia (static, install)",
             "inherits": [ "linux-dbg-base", "no-vcpkg", "no-skia", "install" ]
+        },
+
+        {
+            "name": "linux-clang-vcpkg-rel",
+            "displayName": "Linux Clang release config with vcpkg and Skia (static)",
+            "inherits": [ "linux-vcpkg-rel", "clang" ]
+        }, {
+            "name": "linux-clang-vcpkg-dbg",
+            "displayName": "Linux Clang debug config with vcpkg and Skia (static)",
+            "inherits": [ "linux-vcpkg-dbg", "clang" ]
+        }, {
+            "name": "linux-clang-no-skia-rel",
+            "displayName": "Linux Clang release config with system libraries and no Skia (static, install)",
+            "inherits": [ "linux-no-skia-rel", "clang" ]
+        }, {
+            "name": "linux-clang-no-skia-dbg",
+            "displayName": "Linux Clang debug config with system libraries and no Skia (static, install)",
+            "inherits": [ "linux-no-skia-dbg", "clang" ]
         }
     ],
     "buildPresets": [
@@ -150,6 +168,20 @@
         }, {
             "name": "linux-no-skia-dbg",
             "configurePreset": "linux-no-skia-dbg"
+        },
+
+        {
+            "name": "linux-clang-vcpkg-rel",
+            "configurePreset": "linux-clang-vcpkg-rel"
+        }, {
+            "name": "linux-clang-vcpkg-dbg",
+            "configurePreset": "linux-clang-vcpkg-dbg"
+        }, {
+            "name": "linux-clang-no-skia-rel",
+            "configurePreset": "linux-clang-no-skia-rel"
+        }, {
+            "name": "linux-clang-no-skia-dbg",
+            "configurePreset": "linux-clang-no-skia-dbg"
         }
     ]
 }
