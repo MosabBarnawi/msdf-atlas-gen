@@ -20,10 +20,10 @@ bool Workload::finishSequential() {
 }
 
 bool Workload::finishParallel(int threadCount) {
-    bool result = true;
+    std::atomic<bool> result(true);
     std::atomic<int> next(0);
     std::function<void(int)> threadWorker = [this, &result, &next](int threadNo) {
-        for (int i = next++; result && i < chunks; i = next++) {
+        for (int i = next++; i < chunks && result; i = next++) {
             if (!workerFunction(i, threadNo))
                 result = false;
         }

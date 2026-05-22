@@ -87,6 +87,14 @@
             "hidden": true,
             "binaryDir": "${sourceDir}/build/linux-dbg"
         }, {
+            "name": "clang",
+            "displayName": "Clang compiler configuration",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            }
+        }, {
             "name": "vcpkg",
             "displayName": "Configuration with vcpkg as dependency management system",
             "hidden": true,

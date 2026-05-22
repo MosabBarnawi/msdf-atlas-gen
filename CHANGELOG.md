@@ -1,4 +1,15 @@
 
+## Version 1.4 (2026-03-05)
+
+- Updated to MSDFgen 1.13
+    - Improved BMP file output - support for BGRA (`mtsdf` mode), optimized size of grayscale files
+    - Fixed incorrect output with asymmetrical distance range when inversion occurs due to scanline pass (`-scanline`)
+    - Improved precision of cubic curve distance computation
+    - Fixed a bug incorrectly adjusting convergent edge segments in shape normalization
+    - The library now operates on bitmap section references (instead of contiguous bitmap references), which makes it possible to generate a distance field directly into a subsection of a larger bitmap or a bitmap with the opposite row ordering
+- Updated Shadron preview output
+- Fixed a bug in `FontGeometry` constructor
+
 ## Version 1.3 (2024-06-01)
 
 - Updated to MSDFgen 1.12
